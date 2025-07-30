@@ -1,0 +1,79 @@
+.containerGeneral {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.form {
+  background-color: rgb(0, 170, 255);
+  display: flex;
+  margin-top: 80px;
+}
+
+.form label {
+  border: 0.5px solid gainsboro;
+  display: flex;
+  flex-direction: column;
+}
+
+.form label span {
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form label input {
+  outline: 0;
+  padding: 10px 0px;
+  font-size: 1.6rem;
+}
+
+.buttonContainer {
+  background-color: #eafaff;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer button {
+  background-color: rgb(0, 147, 0);
+  color: whitesmoke;
+  font-weight: bold;
+  width: 70%;
+  height: 70%;
+  border: none;
+  border-radius: 4px;
+}
+
+.resultados {
+  display: flex;
+  background-color: rgb(171, 171, 240);
+  width: 100%;
+  /* justify-content: space-between; */
+}
+
+.resultados div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 0.5px solid gainsboro;
+
+}
+
+.resultados div p {
+  background-color: rgb(0, 170, 255);
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.resultados div span {
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  padding: 10px 0px;
+  font-size: 2rem;
+}
