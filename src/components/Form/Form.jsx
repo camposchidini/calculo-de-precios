@@ -7,11 +7,12 @@ const Form = () => {
     currency: 'ARS',
     minimumFractionDigits: 2
   })
-  const [costo, setCosto] = useState(0)
+  const [costo, setCosto] = useState('')
   const [desc, setDesc] = useState(0)
   const [lista, setLista] = useState(75)
   const [contado, setContado] = useState(40)
   const [precios, setPrecios] = useState({ 
+    precioCosto: '',
     precioLista: '',
     tresCuotas: '',
     cuatroCuotas: '',
@@ -26,6 +27,7 @@ const Form = () => {
     const cuatroCuotas = precioLista / 4
     const precioContado = costoReal + (costoReal / 100 * contado)
     setPrecios({
+      precioCosto: formatter.format(costo.toFixed(2)),
       precioLista: formatter.format(precioLista.toFixed(2)),
       tresCuotas: formatter.format(tresCuotas.toFixed(2)),
       cuatroCuotas: formatter.format(cuatroCuotas.toFixed(2)),
@@ -59,6 +61,10 @@ const Form = () => {
     </form>
 
       <div className={styles.resultados}>
+        <div>
+          <p>Costo</p>
+          <span>{precios.precioCosto}</span>
+        </div>
         <div>
           <p>Precio de lista</p>
           <span>{precios.precioLista}</span>
